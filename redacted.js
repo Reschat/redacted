@@ -135,7 +135,7 @@ $(document).ready(function() {
   var functionList = [];
     
   functionList.push({
-    func: function() { showText("Wel",10); },
+    func: function() { showText("Welcome to whatever this is!",10); },
     delay: 500
   },{
     func: function() { showText("Hello there, you. I am here to say...",10); },
