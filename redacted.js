@@ -18,8 +18,7 @@ function clearAllTimeouts() {
 }
 
 /* Generating a random letter */
-function randomLetters(minLength, maxLength, propercase)
-{
+function randomLetters(minLength, maxLength, propercase) {
   
   /* Resulting string of letters */
   var letters = "";
@@ -72,52 +71,7 @@ function executeWithDelays(functionList) {
   });
 }
 
-
-/* All the basic bindings to add */
-function addBindings() {
-  
-  /* Making a binding for key presses */
-  $(document).keypress(function(event) {
-    
-    /* Preventing page from scrolling when hitting space bar */
-    event.preventDefault();
-    
-    switch (event.keyCode) {
-      case 8:  /* Backspace */
-        
-        break;
-        
-      case 9:  /* Tab */
-      case 13: /* Enter */
-      case 37: /* Left */
-      case 38: /* Up */
-      case 39: /* Right */
-      case 40: /* Down */
-        break;
-        
-      default:
-        var char = String.fromCharCode(event.keyCode);
-        $("#console").append(char);
-        break;
-    }
-  });
-}
-
-/* Initiation stuff on page load */
-function init(){
-  
-  /* Adding list of chapters to page */
-  listChapters();
-  
-  /* Adding bindings */
-  addBindings();
-  
-  /* Start the foreword */
-  foreword();
-  
-}
-
-/*  */
+/* ??? */
 function showText (message, interval, index) { 
   if(!index) index = 0;  
   if (index < message.length) {
@@ -130,16 +84,15 @@ function showText (message, interval, index) {
 
 /* Initializing stuff */
 $(document).ready(function() {
-  //init();
   
   var functionList = [];
     
   functionList.push({
-    func: function() { showText("Welcome to whatever this is!",10); },
+    func: function() { showText("Welcome to Redacted Work.",15); },
     delay: 500
   },{
-    func: function() { showText("Hello there, you. I am here to say...",10); },
-    delay: 1000
+    func: function() { showText("Nothing is here yet - but one day there will be.",15); },
+    delay: 1100
   });  
   
   executeWithDelays(functionList);
@@ -151,14 +104,12 @@ $(document).ready(function() {
     
     $("#input").keyup(function(event){
       if(event.keyCode == 13){
-        showText(this.value,0);
+        showText("Unknown command: " + this.value,0);
         this.value = "";
       }
     });
     
-});
-  
-  //addBindings();
+  });
   
 });
 

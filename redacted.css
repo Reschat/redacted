@@ -1,7 +1,4 @@
 html, body {
-    margin: 0px;
-    padding: 0px;
-    height: 100%;
     background-color: #000000;
     text-align: left;
 }
@@ -31,6 +28,3 @@ p {
   margin-top: 0;
   margin-bottom: 2px;
 }
-
-
-
